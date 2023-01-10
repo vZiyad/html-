@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Greeting Website</title>
+  <style>
+    body { background-color: rgb(237, 213, 182); text-align: center; color: rgb(61, 2, 117); font-size: xx-large; font-style: italic;}
+    button { font-size: large; font-style: italic;}
+  </style>
+</head>
+<body>
+  <form id="greeting-form">
+    <label for="name"><strong>  Please Enter your name:</strong></label><br>
+    <input type="text" id="name" name="name"><br>
+    <button type="submit"><strong>Submit</Strong></button>
+  </form>
+  <script>
+    var form = document.getElementById('greeting-form');
+
+
+    form.addEventListener('submit', function(event) {
+      
+      event.preventDefault();
+
+      
+      var name = document.getElementById('name').value;
+
+      
+      alert(`Hello, ${name}!`);
+
+    });
+  </script>
+</body>
+</html>
